@@ -49,7 +49,14 @@ Let's run a test query with graphiql (localhost:3000/graphiql).
 
 Server console:
 
-![example_consolelog.png](example_consolelog.png)
+```
+Express app listening on localhost:3000
+...
+SQL: RootQuery.user
+Executing (default): SELECT `id`, `firstname`, `lastname`, `email` FROM `Users` AS `User` WHERE `User`.`id` = '1';
+SQL: User.projects
+Executing (default): SELECT `id`, `name`, `UserId` FROM `Projects` AS `Project` WHERE `Project`.`UserId` = 1;
+```
 
 So conclusion is that there were two queries to the database to serve this one graphql query.
 
